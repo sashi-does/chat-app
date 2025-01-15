@@ -30,7 +30,7 @@ const topics = [
   },
   {
     id: uuid(),
-    name: 'Node.js',
+    name: 'NodeJS',
     img: "/node.png",
     desc: "Learn about backend development using Node.js and its ecosystem."
   },
@@ -42,7 +42,7 @@ const topics = [
   },
   {
     id: uuid(),
-    name: 'Data Science',
+    name: 'DataScience',
     img: "/ds.png",
     desc: "Discuss the concepts of data analysis, visualization, and machine learning."
   }
@@ -77,7 +77,7 @@ const Forums = () => {
                 <h2 className="text-xl font-semibold text-gray-800">{topic.name}</h2>
               </div>
               <p className="text-gray-600 flex-grow">{topic.desc}</p>
-              <Link href={`/discuss/${topic.id}`}>
+              <Link href={`/discuss/${topic.name}-${topic.id}`}>
                 <Button className="mt-6">
                   Join Discussion
                 </Button>

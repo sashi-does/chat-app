@@ -23,13 +23,14 @@ export default function ChatForum ({slug}) {
     tokenOrProvider: userToken,
     userData: user,
   });
-
+  const topicName = slug.split("-");
+  const topic = topicName[0];
   useEffect(() => {
     if (!client) return;
 
     const channel = client.channel('messaging', slug, {
       image: 'https://getstream.io/random_png/?name=react',
-      name: 'Discussion',
+      name: topic + ' Discussions',
       members: [userId],
     });
 
